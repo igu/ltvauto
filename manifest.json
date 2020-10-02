@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "LTV — Downloader for Legendas.TV",
+    "version": "0.2",
+    "description": "Baixe as legendas de sua série ou filme favorito com apenas um clique sem sair da página no site do legendas.tv",
+    "browser_action": {
+        "default_icon": "icons/favicon32.png"
+    },
+    "icons": {
+        "16":  "icons/favicon16.png",
+        "48":  "icons/favicon32.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://legendas.tv/", "http://legendas.tv/busca/*"],
+            "js": ["scripts/download.js"]
+        }
+    ]
+}
